@@ -145,7 +145,6 @@ export default function Form(props) {
                             variant="contained"
                             color="primary"
                             type='submit'
-                            className={classes.button}
                             endIcon={<SendIcon/>}
                         >
                             Send
