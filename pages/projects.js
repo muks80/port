@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => {
     }
 })
 
-export default function Projects({ projects }) {
+export default function projects({ projects }) {
     const classes = useStyles()
 
     return (
