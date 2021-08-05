@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => {
     }
 })
 
-export default function projects({ projects }) {
+export default function Projects({ projects }) {
     const classes = useStyles()
 
     return (
@@ -72,8 +72,3 @@ export default function projects({ projects }) {
         </div>
     )
 }
-
-
-// *In Grid next to spacing{4}* - alignItems='stretch'
-// *In Project card* - className={classes.card}
-// *In GridItem* - className={classes.gridItem}
