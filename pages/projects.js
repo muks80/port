@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme) => {
             margin: '50px'      
         },
         margin: {
-            margin: '50px' 
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            width: '90%'
         },
         gridItem: {
             display: 'flex'
@@ -49,14 +52,14 @@ export default function Projects({ projects }) {
         <div> 
             <div>
                 <div>
-                    <Box className={classes.box}>
+                <Box className={classes.box}>
+                    <Container>
+                        <div className={classes.toolbar}></div>
                         <Container>
-                            <div className={classes.toolbar}></div>
-                            <Container>
-                                <Typography variant='h3' component='h1' className={classes.text}>Projects</Typography>
-                            </Container>
+                            <Typography variant='h3' component='h1' className={classes.text}>Projects</Typography>
                         </Container>
-                    </Box>
+                    </Container>
+                </Box>
                 </div>
                 <Container className={classes.margin}>
                     <Grid container spacing={4}>
