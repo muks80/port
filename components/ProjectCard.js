@@ -14,14 +14,15 @@ import LinkIcon from '@material-ui/icons/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { Link, Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345
+    maxWidth: 345,
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -33,32 +34,38 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  avatar: {
-    backgroundColor: red[500],
-  },
 }));
 
 export default function ProjectCard({ project }) {
-  const { title, technologies, thumbnail, description, github, url } = project.fields
+  const { title, technologies, thumbnail, description, details, github, url } = project.fields
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
+  const [hover, setHover] = useState({elevated: false, shadow: 1});
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <Card className={classes.root}>
+    <Box 
+      component={Card}
+      className={classes.root}
+      onMouseOver={() => setHover({elevated: true, shadow: 5})}
+      onMouseOut={() => setHover({elevated: false, shadow: 2})}
+      boxShadow={hover.shadow}
+    >
       <CardHeader
         title={title}
-        subheader={technologies.join(', ')}
+        subheader={`Technolgies used: ${technologies.join(', ')}`}
       />
       <CardMedia
         className={classes.media}
         image={`https:${thumbnail.fields.file.url}`}
         title={title}
+        component={Link}
+        href={url}
       />
-      <CardContent>
+      <CardContent style={{paddingBottom: 0}}>
         <Typography variant="body2" color="textSecondary" component="span">
             {documentToReactComponents(description)}
         </Typography>
@@ -83,18 +90,12 @@ export default function ProjectCard({ project }) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph >Method:</Typography>
-          <Typography paragraph>
-            {documentToReactComponents(description)}
-          </Typography>
-          <Typography paragraph>
-            {documentToReactComponents(description)}
-          </Typography>
-          <Typography paragraph>
-            {documentToReactComponents(description)}
+          <Typography variant="body2" color="textSecondary" component="span">Description:</Typography>
+          <Typography variant="body2" color="textSecondary" component="span">
+          {documentToReactComponents(details)}
           </Typography>
         </CardContent>
       </Collapse>
-    </Card>
+    </Box>
   );
 }

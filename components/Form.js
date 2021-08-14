@@ -44,12 +44,13 @@ export default function Form(props) {
         let temp = {}
             temp.firstName = values.firstName ? "" : "First name is required."
             temp.secondName = values.secondName ? "" : "Second name is required."
-            temp.email = (/^$|.+@.+..+/).test(values.email) ? "" : "Not a valid email address."
+            temp.email = ((/^$|.+@.+..+/).test(values.email) && values.email) ? "" : "Not a valid email address."
             temp.telephone = values.telephone.length > 10 ? "" : "Mimumum of 11 numbers required"
             temp.message = values.message ? "" : "Message is required."
         setErrors({
             ...temp
         })
+        console.log(temp);
         return Object.values(temp).every(x => x == "")
     }
 
@@ -68,8 +69,8 @@ export default function Form(props) {
         validate();
         if(validate()){
             sendEmail(e);
+            handleClose();
         }
-        handleClose();
     }
 
     return (
