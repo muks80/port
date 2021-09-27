@@ -127,7 +127,7 @@ export default function Layout({children}) {
                         <GitHubIcon/>
                     </Badge>
                 </IconButton>
-                <IconButton className={classes.text}>
+                <IconButton className={classes.text} href='https://www.linkedin.com/in/matthew-s-1ba82221a'target='_blank'>
                 <Badge>
                     <LinkedInIcon/>
                 </Badge>
