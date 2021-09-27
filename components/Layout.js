@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 const headersData = [
     {
-        label: 'About',
+        label: 'Home',
         href: '/'
     },
     {

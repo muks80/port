@@ -23,7 +23,9 @@ export default function Home() {
         <div className={classes.toolbar}></div>
         <Container >
           <Typography variant='h3' className={classes.text}>Matt Smith Web Developer</Typography>
-          <Typography variant='body1' className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odit dolore, corporis cum ex rerum iure! Porro natus possimus sit temporibus eaque, nisi id ducimus iste optio quae minima vitae!</Typography>
+          <Typography variant='body1' className={classes.text}>Self taught web developer specialising in HTML, CSS and JavaScript 
+                      as well as a range of front end frameworks including REACT, Next.js, Material-UI, Semantic-UI and Materialize.
+          </Typography>
         </Container>
       </Container>
     </Box>
