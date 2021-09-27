@@ -78,7 +78,7 @@ export default function Layout({children}) {
                             <GitHubIcon/>
                         </Badge>
                     </IconButton>
-                    <IconButton className={classes.text}>
+                    <IconButton className={classes.text} href='https://www.linkedin.com/in/matthew-s-1ba82221a/' target='_blank'>
                     <Badge>
                         <LinkedInIcon/>
                     </Badge>
@@ -122,15 +122,15 @@ export default function Layout({children}) {
                     <div className={classes.drawer}>{getDrawerChoices()}</div>
                 </Drawer>
                 <PopUp/>
-                <IconButton className={classes.text} href='https://github.commuks80'target='_blank'>
+                <IconButton className={classes.text} href='https://github.commuks80' target='_blank'>
                     <Badge>
                         <GitHubIcon/>
                     </Badge>
                 </IconButton>
-                <IconButton className={classes.text} href='https://www.linkedin.com/in/matthew-s-1ba82221a'target='_blank'>
-                <Badge>
-                    <LinkedInIcon/>
-                </Badge>
+                <IconButton className={classes.text} href='https://www.linkedin.com/in/matthew-s-1ba82221a/' target='_blank'>
+                    <Badge>
+                        <LinkedInIcon/>
+                    </Badge>
                 </IconButton>
             </Toolbar>
         )
