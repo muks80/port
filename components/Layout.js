@@ -78,7 +78,7 @@ export default function Layout({children}) {
                             <GitHubIcon/>
                         </Badge>
                     </IconButton>
-                    <IconButton className={classes.text} href='https://www.linkedin.com/in/matthew-s-1ba82221a/' target='_blank'>
+                    <IconButton className={classes.text} href='https://www.linkedin.com/in/matthew-m-1ba82221a/' target='_blank'>
                     <Badge>
                         <LinkedInIcon/>
                     </Badge>
@@ -164,7 +164,7 @@ export default function Layout({children}) {
                      
             <Box className={classes.footer}>
                 <Container>
-                   <Typography variant='body1' className={classes.text}>© Matt Smith 2021</Typography>
+                   <Typography variant='body1' className={classes.text}>© Matt Marriott 2021</Typography>
                 </Container>
             </Box>
         </div>  
