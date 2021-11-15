@@ -28,10 +28,8 @@ const useStyles = makeStyles((theme) => {
             display: 'block',
             marginLeft: 'auto',
             marginRight: 'auto',
-            width: '90%'
-        },
-        gridItem: {
-            display: 'flex'
+            width: '90%',
+            marginBottom: '50px'
         },
         card: {
             display: 'flex',
@@ -62,9 +60,9 @@ export default function Projects({ projects }) {
                 </Box>
                 </div>
                 <Container className={classes.margin}>
-                    <Grid container spacing={4}>
+                    <Grid container alignItems="stretch" spacing={4}>
                         {projects.map(project => (
-                            <Grid item xs={12} sm={6} md={4} key={project.sys.id}>
+                            <Grid item xs={12} sm={6} md={4} key={project.sys.id} style={{display: 'flex'}}>
                                 <ProjectCard project={project}/>
                             </Grid>
                         ))}
