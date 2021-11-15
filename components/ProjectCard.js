@@ -19,6 +19,7 @@ import { Link, Box } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    minHeight: 570,
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'column'
