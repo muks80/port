@@ -6,6 +6,12 @@ const theme = createTheme({
         primary: {
             main: blueGrey[700]
         }
+    },
+    typography: {
+        fontFamily: [
+            'Lano',
+            'sans-serif'
+        ].join(',')
     }
 });
 

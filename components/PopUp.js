@@ -45,7 +45,7 @@ export default function PopUp() {
                 <div className={classes.dialogText}>Contact Form</div>
             </DialogTitle>
             <DialogContent className={classes.dialogTitle}>
-                <p className={classes.dialogText}>Please complete the form and I will get back to you asap</p>
+                <p className={classes.dialogText}>For any queries please complete the below form and I will get back <br />to you as soon as possible.</p>
             </DialogContent>
             <DialogContent>
                 <Form handleClose={handleClose}/>

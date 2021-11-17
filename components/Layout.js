@@ -7,6 +7,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import PopUp from './PopUp';
 import FloatingActionButton from './FloatingActionButton';
 import { useEffect, useState } from 'react';
+import { getRouteMatcher } from 'next/dist/next-server/lib/router/utils';
 
 const headersData = [
     {
@@ -29,7 +30,16 @@ const useStyles = makeStyles((theme) => {
         },
         text: {
             color: theme.palette.primary.contrastText,
-            textDecoration: 'none'
+            textDecoration: 'none',
+            transition: '1s'
+        },
+        icon: {
+            color: theme.palette.primary.contrastText,
+            textDecoration: 'none',
+            transition: '1s',
+            '&:hover': {
+                transform: 'rotateY(360deg)'
+            }
         },
         root: {
             '& .MuiPaper-root': {
@@ -73,12 +83,12 @@ export default function Layout({children}) {
                     ))}
                     </div>
                     <PopUp/>
-                    <IconButton className={classes.text} href='https://github.com/muks80' target='_blank'>
+                    <IconButton className={classes.icon} href='https://github.com/muks80' target='_blank'>
                         <Badge>
                             <GitHubIcon/>
                         </Badge>
                     </IconButton>
-                    <IconButton className={classes.text} href='https://www.linkedin.com/in/matthew-m-1ba82221a/' target='_blank'>
+                    <IconButton className={classes.icon} href='https://www.linkedin.com/in/matthew-m-1ba82221a/' target='_blank'>
                     <Badge>
                         <LinkedInIcon/>
                     </Badge>
@@ -157,7 +167,7 @@ export default function Layout({children}) {
                 </AppBar>
             </div>
 
-            <div className='page-content'>
+            <div >
                 <FloatingActionButton/>
                 { children }
             </div>
