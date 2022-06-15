@@ -174,7 +174,7 @@ export default function Layout({children}) {
                      
             <Box className={classes.footer}>
                 <Container>
-                   <Typography variant='body1' className={classes.text}>© Matt Marriott 2021</Typography>
+                   <Typography variant='body1' className={classes.text}>© Matt Smith 2021</Typography>
                 </Container>
             </Box>
         </div>  

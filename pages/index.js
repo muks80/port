@@ -42,7 +42,7 @@ export default function Home() {
       <Container>
         <Container>
           <div className={classes.typingDemo}>
-            <Typography variant='h3' className={classes.text}>Matt Marriott Web Developer...</Typography>
+            <Typography variant='h3' className={classes.text}>Matt Smith Web Developer...</Typography>
           </div>
           <Typography variant='body1' className={classes.text}>Junior web developer specialising in HTML, CSS, JavaScript and TypeScript
                       as well as a range of front end frameworks including REACT, Next.js, Material-UI, Semantic-UI and Materialize.
