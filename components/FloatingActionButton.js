@@ -29,7 +29,7 @@ export default function FloatingActionButton() {
 
     return (
     <div className={classes.root}>
-      <a href='/matthew-smith-CV-new-cv (1).pdf' download  className={classes.text}>      
+      <a href='/matthew-smith-CV-new-cv (2).pdf' download  className={classes.text}>      
       <Fab variant="extended" className={classes.fab}>
         <GetAppIcon className={classes.extendedIcon} />
         Download CV
